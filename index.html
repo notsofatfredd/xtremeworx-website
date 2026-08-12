@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xtreme WorX | Precision Without Compromise</title>
-<meta name="description" content="Premium car detailing, ceramic coating, window tinting, and car wash in Lansdowne, Cape Town. For The Xtreemist. Every finish should look intentional.">
+<meta name="description" content="Premium car detailing, ceramic coating, window tinting, and car wash in Lansdowne, Cape Town. For The Xtreemist.">
 <link rel="canonical" href="https://xtremeworx.co.za/">
 
 <!-- Favicons / home-screen icons -->
@@ -102,7 +102,7 @@
     padding:18px 5vw;
     background:linear-gradient(to bottom, rgba(5,5,5,0.92), transparent);
   }
-  .logo-mark{height:34px;}
+  .logo-mark{height:34px;width:auto;aspect-ratio:360/120;}
   nav ul{display:flex;gap:2.4rem;list-style:none;}
   nav a{
     font-family:'Rajdhani',sans-serif;
@@ -127,13 +127,27 @@
       linear-gradient(180deg, var(--obsidian) 0%, var(--navy) 60%, var(--obsidian) 100%);
   }
   .hero-logo{
-    max-width:520px;width:70vw;
-    margin:0 auto 2.2rem;
+    max-width:340px;width:52vw;
+    aspect-ratio:900/302;
+    height:auto;
+    margin:0 auto 1.2rem;
     opacity:0;
     transform:translateY(10px) scale(0.98);
     filter:drop-shadow(0 0 30px rgba(21,101,255,0.25));
     animation:heroFadeIn .8s ease forwards;
   }
+  .hero-wordmark{
+    font-family:'Orbitron',sans-serif;
+    font-weight:800;
+    font-size:clamp(1.6rem,4.2vw,2.6rem);
+    letter-spacing:0.03em;
+    color:var(--silver);
+    margin-bottom:1.4rem;
+    opacity:0;
+    transform:translateY(10px);
+    animation:heroFadeIn .8s ease .12s forwards;
+  }
+  .hero-wordmark span{color:var(--blue);}
   .hero-tagline{
     font-family:'Rajdhani',sans-serif;
     font-weight:600;
@@ -143,7 +157,7 @@
     margin-bottom:1.6rem;
     opacity:0;
     transform:translateY(10px);
-    animation:heroFadeIn .8s ease .15s forwards;
+    animation:heroFadeIn .8s ease .24s forwards;
   }
   @keyframes heroFadeIn{
     to{opacity:1;transform:translateY(0);}
@@ -157,13 +171,13 @@
     margin-bottom:2.4rem;
     opacity:0;
     transform:translateY(10px);
-    animation:heroFadeIn .8s ease .3s forwards;
+    animation:heroFadeIn .8s ease .36s forwards;
   }
   .btn-row{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
   .hero-cta-group{
     opacity:0;
     transform:translateY(10px);
-    animation:heroFadeIn .8s ease .45s forwards;
+    animation:heroFadeIn .8s ease .48s forwards;
   }
   .btn{
     display:inline-flex;align-items:center;gap:10px;
@@ -403,7 +417,7 @@
     display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;
     padding-bottom:2.6rem;
   }
-  .footer-brand .logo-mark{height:28px;margin-bottom:1rem;}
+  .footer-brand .logo-mark{height:28px;width:auto;aspect-ratio:360/120;margin-bottom:1rem;}
   .footer-brand p{color:var(--titanium-text);font-size:0.86rem;max-width:260px;}
   .footer-tagline{
     font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:0.3em;
@@ -459,6 +473,7 @@
   }
   .header-mark{
     height:34px;width:auto;
+    aspect-ratio:420/140;
     opacity:0;
     filter:drop-shadow(0 0 6px rgba(21,101,255,0.4));
     transition:opacity .3s ease;
@@ -468,7 +483,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .hero-logo,.hero-tagline,.hero h1,.hero-cta-group{
+    .hero-logo,.hero-wordmark,.hero-tagline,.hero h1,.hero-cta-group{
       animation:none;opacity:1;transform:none;
     }
     header.is-active{background:rgba(5,5,5,0.94);}
@@ -566,7 +581,7 @@
 <body>
 
 <header id="siteHeader">
-  <img src="assets/xw-mark-icon.png" alt="Xtreme WorX" class="header-mark" id="headerMark" width="300" height="165" decoding="async">
+  <img src="assets/xw-mark-icon.png" alt="Xtreme WorX" class="header-mark" id="headerMark" width="420" height="140" decoding="async">
   <nav>
     <ul>
       <li><a href="#services">Services</a></li>
@@ -595,9 +610,10 @@
 
 <!-- HERO: static, visible immediately, no scroll-driven animation -->
 <section class="hero" id="heroSection">
-  <img src="assets/xw-logo-primary-transparent.png" alt="Xtreme WorX" class="hero-logo" width="1100" height="733" fetchpriority="high">
+  <img src="assets/xw-logo-primary-transparent.png" alt="Xtreme WorX" class="hero-logo" width="900" height="302" fetchpriority="high">
+  <div class="hero-wordmark">XTREME <span>WORX</span></div>
   <p class="hero-tagline">FOR THE XTREEMIST</p>
-  <h1>Precision without compromise. Every finish should look intentional.</h1>
+  <h1>Precision without compromise. Detailing, ceramic coating, and window tinting for cars that deserve better.</h1>
   <div class="btn-row hero-cta-group">
     <a href="#contact" class="btn btn-primary">Book a Consultation</a>
     <a href="#services" class="btn btn-ghost">View Services</a>
@@ -608,7 +624,7 @@
 <!-- BRAND PROMISE -->
 <div class="promise-band">
   <p>"Every finish should look <span class="mark">intentional.</span>"</p>
-  <p class="promise-attr">Xtreme WorX, Brand Promise</p>
+  <p class="promise-attr">Xtreme WorX Brand Promise</p>
 </div>
 
 <!-- SERVICES -->
@@ -618,7 +634,7 @@
       <span class="section-tag">01 / Services</span>
       <h2>The Work</h2>
     </div>
-    <p>Four disciplines, one standard. Precision, reflection, protection, craftsmanship.</p>
+    <p>Four disciplines, one standard. Precision, care, protection, craftsmanship.</p>
   </div>
   <div class="service-grid">
     <div class="service-card reflect reveal">
@@ -629,12 +645,12 @@
     <div class="service-card reflect reveal">
       <span class="service-num mono">02</span>
       <h3>Ceramic Coating</h3>
-      <p>Long-term chemical protection that holds gloss and hydrophobic performance for years, not weeks.</p>
+      <p>Long-term ceramic protection that holds gloss and hydrophobic performance for years, not weeks.</p>
     </div>
     <div class="service-card reflect reveal">
       <span class="service-num mono">03</span>
       <h3>Window Tinting</h3>
-      <p>Precision-cut film application with zero bubbling and clean edge lines. Heat rejection without the amateur finish.</p>
+      <p>Precision-cut film application with zero bubbling and clean edge lines. Real heat rejection, not an amateur finish.</p>
     </div>
     <div class="service-card reflect reveal">
       <span class="service-num mono">04</span>
@@ -661,12 +677,12 @@
       <div class="spec-plate-title">Window Tint / Install Spec</div>
       <div class="mono">PLATE / 02A</div>
     </div>
-    <div class="spec-row"><span class="spec-label">Film Type</span><span class="spec-value">Apex Auto Shield / Smash &amp; Grab</span></div>
+    <div class="spec-row"><span class="spec-label">Film Type</span><span class="spec-value">Apex Auto Shield / Smash &amp; Grab Film</span></div>
     <div class="spec-row"><span class="spec-label">Shade Options</span><span class="spec-value hot">Clear, 50%, 35%, 20%, 15%, 5%</span></div>
     <div class="spec-row"><span class="spec-label">UV Rejection</span><span class="spec-value">99%</span></div>
     <div class="spec-row"><span class="spec-label">Install Method</span><span class="spec-value">Precision Pre-Cut, Panel-Fit</span></div>
     <div class="spec-row"><span class="spec-label">Warranty</span><span class="spec-value hot">5-Year Premium</span></div>
-    <div class="spec-row"><span class="spec-label">Typical Turnaround</span><span class="spec-value">[Confirm Hours]</span></div>
+    <div class="spec-row"><span class="spec-label">Typical Turnaround</span><span class="spec-value">Ask In-Store</span></div>
   </div>
 </section>
 
@@ -675,7 +691,7 @@
   <div class="editorial-media" role="img" aria-label="Xtreme WorX cover feature: VW Golf GTI at night"></div>
   <div class="editorial-copy">
     <span class="section-tag">03 / Feature</span>
-    <p class="pull-quote">"The brief wasn't <span class="mark">clean the car.</span> It was make it look like it just left the factory floor: inside, outside, and through the glass."</p>
+    <p class="pull-quote">"The brief wasn't to <span class="mark">clean the car.</span> It was to make it look like it just left the factory floor: inside, outside, and through the glass."</p>
     <p class="attribution">Xtreme WorX Cover Feature</p>
   </div>
 </section>
@@ -724,7 +740,7 @@
       <span class="section-tag">05 / Process</span>
       <h2>How a Car Comes In</h2>
     </div>
-    <p>A fixed sequence. Every finish should look intentional, not rushed.</p>
+    <p>A fixed sequence. No shortcuts between wash and final inspection.</p>
   </div>
   <div class="process-list">
     <div class="process-item reveal">
@@ -761,7 +777,7 @@
   <div class="section-head">
     <div>
       <span class="section-tag">06 / Contact</span>
-      <h2>Bring the Car In</h2>
+      <h2>Get In Touch</h2>
     </div>
     <p>Lansdowne, Cape Town. By appointment.</p>
   </div>
@@ -785,8 +801,8 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="assets/xw-logo-secondary.png" alt="Xtreme WorX" class="logo-mark" width="240" height="137" loading="lazy" decoding="async">
-      <p>Precision detailing, ceramic coating, and window tinting. By appointment.</p>
+      <img src="assets/xw-logo-secondary.png" alt="Xtreme WorX" class="logo-mark" width="360" height="120" loading="lazy" decoding="async">
+      <p>Precision detailing, ceramic coating, window tinting, and car wash. By appointment.</p>
       <p class="footer-tagline">FOR THE XTREEMIST</p>
     </div>
     <div class="footer-col">
@@ -810,7 +826,7 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 Xtreme WorX. All rights reserved.</span>
-    <span>Brand system by AXIEL / Atlas OS ATL-003</span>
+    <span>Site by AXIEL</span>
   </div>
 </footer>
 
