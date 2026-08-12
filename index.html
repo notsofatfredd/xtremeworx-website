@@ -313,29 +313,60 @@
   .spec-value{font-family:'JetBrains Mono',monospace;color:var(--silver);}
   .spec-value.hot{color:var(--blue);}
 
-  /* ===== GALLERY ===== */
-  .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:210px;
-    gap:1rem;
-  }
-  .g1{grid-column:span 2;grid-row:span 2;}
-  .g2{grid-column:span 2;grid-row:span 1;}
-  .g3{grid-column:span 1;grid-row:span 1;}
-  .gallery-item{
-    position:relative;overflow:hidden;
+  /* ===== GALLERY / SLIDESHOW ===== */
+  .slideshow{
+    position:relative;
+    aspect-ratio:16/10;
+    max-height:640px;
+    overflow:hidden;
     border:1px solid var(--line);
     background:var(--graphite);
   }
-  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-  .gallery-item:hover img{transform:scale(1.05);}
-  .gallery-cap{
+  .slideshow-track{
+    display:flex;
+    height:100%;
+    transition:transform .6s cubic-bezier(.2,.7,.3,1);
+  }
+  .slide{position:relative;flex:0 0 100%;height:100%;}
+  .slide img{width:100%;height:100%;object-fit:cover;display:block;}
+  .slide-cap{
     position:absolute;left:0;bottom:0;right:0;
-    padding:1rem 1.1rem;
-    background:linear-gradient(to top, rgba(5,5,5,0.92), transparent);
+    padding:1.6rem 1.8rem;
+    background:linear-gradient(to top, rgba(5,5,5,0.85), transparent);
     font-family:'Rajdhani',sans-serif;
-    font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--silver);
+    font-size:0.85rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--silver);
+  }
+  .slide-nav{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:46px;height:46px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(5,5,5,0.55);
+    border:1px solid var(--line);
+    color:var(--chrome);
+    font-size:1.6rem;line-height:1;
+    cursor:pointer;
+    transition:background .2s, border-color .2s;
+    z-index:2;
+  }
+  .slide-nav:hover{background:rgba(5,5,5,0.85);border-color:var(--silver);}
+  .slide-nav.prev{left:1rem;}
+  .slide-nav.next{right:1rem;}
+  .slide-dots{
+    position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);
+    display:flex;gap:0.6rem;
+    z-index:2;
+  }
+  .slide-dot{
+    width:9px;height:9px;border-radius:50%;
+    background:rgba(217,222,229,0.35);
+    border:none;
+    cursor:pointer;
+    padding:0;
+    transition:background .2s,transform .2s;
+  }
+  .slide-dot.is-active{background:var(--blue);transform:scale(1.2);}
+  @media (prefers-reduced-motion: reduce){
+    .slideshow-track{transition:none;}
   }
 
   /* ===== MAGAZINE COVER FEATURE ===== */
@@ -449,10 +480,8 @@
     .editorial-media{min-height:320px;}
     .process-item{grid-template-columns:50px 1fr;}
     .process-item p{grid-column:2;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);}
-    .g1{grid-column:span 2;}
-    .g2{grid-column:span 2;}
-    .g3{grid-column:span 1;}
+    .slideshow{aspect-ratio:3/4;max-height:520px;}
+    .slide-nav{width:38px;height:38px;font-size:1.3rem;}
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media (prefers-reduced-motion: reduce){
@@ -696,39 +725,55 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY / SLIDESHOW -->
 <section id="gallery">
   <div class="section-head">
     <div>
       <span class="section-tag">04 / Gallery</span>
       <h2>Recent Work</h2>
     </div>
-    <p>Real cars, real bay, real finish.</p>
+    <p>Real cars, real bay, real finish. Updated weekly.</p>
   </div>
-  <div class="gallery-grid">
-    <div class="gallery-item g1 reflect reveal">
-      <img src="assets/campaigns/xw-campaign-carwash-open.jpg" alt="Xtreme WorX car wash campaign: BMW being foam washed" loading="lazy" decoding="async" style="object-position:50% 35%;">
-      <div class="gallery-cap">Car Wash</div>
+
+  <!-- To add a new photo: copy one .slide block below, change the image src/alt
+       and the .slide-cap text, then add one more dot button to .slide-dots
+       to match (same order). New slides always go in as their own block. -->
+  <div class="slideshow reveal" id="slideshow">
+    <div class="slideshow-track" id="slideshowTrack">
+      <div class="slide">
+        <img src="assets/campaigns/xw-campaign-carwash-open.jpg" alt="Xtreme WorX car wash campaign: BMW being foam washed" loading="lazy" decoding="async" style="object-position:50% 35%;">
+        <div class="slide-cap">Car Wash</div>
+      </div>
+      <div class="slide">
+        <img src="assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="Volkswagen Tiguan R-Line after ceramic detail, showroom-gloss finish" loading="lazy" decoding="async">
+        <div class="slide-cap">Detail</div>
+      </div>
+      <div class="slide">
+        <img src="assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 in the bay with tinted windows reflecting the ceiling lighting" loading="lazy" decoding="async">
+        <div class="slide-cap">Tint</div>
+      </div>
+      <div class="slide">
+        <img src="assets/campaigns/xw-campaign-bmw-shop.jpg" alt="Xtreme WorX shop floor with feature vehicles" loading="lazy" decoding="async" style="object-position:50% 100%;">
+        <div class="slide-cap">Feature</div>
+      </div>
+      <div class="slide">
+        <img src="assets/gallery/xw-detail-m4-red-feature.jpg" alt="Red BMW M4 feature vehicle in the Xtreme WorX bay" loading="lazy" decoding="async">
+        <div class="slide-cap">Showcase</div>
+      </div>
+      <div class="slide">
+        <img src="assets/gallery/xw-detail-interior-thankyou.jpg" alt="Xtreme WorX branded thank-you floor mat placed after an interior detail" loading="lazy" decoding="async" style="object-position:50% 68%;">
+        <div class="slide-cap">Interior</div>
+      </div>
     </div>
-    <div class="gallery-item g3 reflect reveal">
-      <img src="assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="Volkswagen Tiguan R-Line after ceramic detail, showroom-gloss finish" loading="lazy" decoding="async">
-      <div class="gallery-cap">Detail</div>
-    </div>
-    <div class="gallery-item g3 reflect reveal">
-      <img src="assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 in the bay with tinted windows reflecting the ceiling lighting" loading="lazy" decoding="async">
-      <div class="gallery-cap">Tint</div>
-    </div>
-    <div class="gallery-item g2 reflect reveal">
-      <img src="assets/campaigns/xw-campaign-bmw-shop.jpg" alt="Xtreme WorX shop floor with feature vehicles" loading="lazy" decoding="async" style="object-position:50% 100%;">
-      <div class="gallery-cap">Feature</div>
-    </div>
-    <div class="gallery-item g3 reflect reveal">
-      <img src="assets/gallery/xw-detail-m4-red-feature.jpg" alt="Red BMW M4 feature vehicle in the Xtreme WorX bay" loading="lazy" decoding="async">
-      <div class="gallery-cap">Showcase</div>
-    </div>
-    <div class="gallery-item g3 reflect reveal">
-      <img src="assets/gallery/xw-detail-interior-thankyou.jpg" alt="Xtreme WorX branded thank-you floor mat placed after an interior detail" loading="lazy" decoding="async" style="object-position:50% 68%;">
-      <div class="gallery-cap">Interior</div>
+    <button class="slide-nav prev" id="slidePrev" aria-label="Previous photo">&#8249;</button>
+    <button class="slide-nav next" id="slideNext" aria-label="Next photo">&#8250;</button>
+    <div class="slide-dots" id="slideDots" role="tablist" aria-label="Gallery slides">
+      <button class="slide-dot is-active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+      <button class="slide-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+      <button class="slide-dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+      <button class="slide-dot" role="tab" aria-label="Slide 4" aria-selected="false"></button>
+      <button class="slide-dot" role="tab" aria-label="Slide 5" aria-selected="false"></button>
+      <button class="slide-dot" role="tab" aria-label="Slide 6" aria-selected="false"></button>
     </div>
   </div>
 </section>
