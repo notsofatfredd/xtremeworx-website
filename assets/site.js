@@ -121,7 +121,7 @@
     startAutoplay();
   });
 
-  goTo(0);
+  goTo(Math.floor(Math.random() * count));
   startAutoplay();
 })();
 
