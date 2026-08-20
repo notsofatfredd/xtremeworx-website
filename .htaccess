@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------
 # XTREME WORX — xtremeworx.co.za — hosting-layer hardening
-# Static site, one external script file (assets/site.js), no forms,
-# no backend. Drop this in the web root once the domain is live.
+# Static site, single external script file under assets/ (site.js),
+# no forms, no backend. Drop this in the web root once the domain is live.
 # ------------------------------------------------------------------
 
 # Force HTTPS on every request
@@ -21,6 +21,13 @@ Options -Indexes
 
 # Keep internal docs out of the public web root
 <FilesMatch "\.(md)$">
+  Require all denied
+</FilesMatch>
+
+# Block stray backup/editor files, in case a raw working folder (which
+# accumulates timestamped .bak snapshots during editing) ever gets
+# uploaded directly instead of a curated release package
+<FilesMatch "\.(bak|old|orig)([.~]?\d*)?$">
   Require all denied
 </FilesMatch>
 
