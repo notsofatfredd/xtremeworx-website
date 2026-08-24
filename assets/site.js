@@ -31,4 +31,12 @@
       });
     });
   }
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll(".reel-card video").forEach(function (video) {
+      video.removeAttribute("autoplay");
+      video.pause();
+      video.removeAttribute("loop");
+    });
+  }
 })();
