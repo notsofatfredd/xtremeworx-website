@@ -3,27 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Xtreme WorX — Premium Detailing, Ceramic Coating &amp; Car Wash | Cape Town</title>
-<meta name="description" content="Xtreme WorX — premium detailing, ceramic coating, window tinting and car wash in Lansdowne, Cape Town. For The Xtreemist." />
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
-<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-<link rel="manifest" href="data:application/json,">
+<title>Car Wash &amp; Detailing in Lansdowne, Cape Town | Xtreme WorX</title>
+<meta name="description" content="Xtreme WorX — premium detailing, ceramic coating, PPF, headlight restoration, vehicle tinting and architectural glass tinting in Lansdowne, Cape Town. For The Xtreemist." />
+<link rel="icon" href="./favicon.ico" sizes="any" />
+<link rel="icon" href="./assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="./assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
 <meta property="og:title" content="Xtreme WorX — For The Xtreemist" />
-<meta property="og:description" content="Premium detailing, ceramic coating, window tinting and car wash in Lansdowne, Cape Town." />
+<meta property="og:description" content="Premium vehicle care, PPF, headlight restoration, vehicle tinting and architectural glass tinting in Lansdowne, Cape Town." />
 <meta property="og:image" content="/assets/og-image.jpg" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xtremeworx.co.za/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Xtreme WorX — For The Xtreemist" />
-<meta name="twitter:description" content="Premium detailing, ceramic coating, window tinting and car wash in Lansdowne, Cape Town." />
+<meta name="twitter:description" content="Premium vehicle care, PPF, headlight restoration, vehicle tinting and architectural glass tinting in Lansdowne, Cape Town." />
 <meta name="twitter:image" content="/assets/og-image.jpg" />
 <link rel="canonical" href="https://xtremeworx.co.za/" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoDetailing",
+  "@type": "AutomotiveBusiness",
   "name": "Xtreme WorX",
   "slogan": "For The Xtreemist",
   "url": "https://xtremeworx.co.za/",
@@ -56,22 +55,24 @@
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detailing" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceramic Coating" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paint Protection Film" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Window Tinting" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Wash" } }
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Headlight Restoration" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Wash" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Architectural Glass Tinting" } }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/style.css" />
+<link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="./assets/fonts/rajdhani-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap nav-shell">
     <a class="brand" href="#top">
-      <img class="brand-mark" src="/assets/xw-mark-icon.png" alt="Xtreme WorX" />
+      <img class="brand-mark" src="./assets/xw-logo-secondary.png" srcset="./assets/xw-logo-secondary-680.png 680w, ./assets/xw-logo-secondary.png 1000w" sizes="180px" alt="Xtreme WorX" />
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
@@ -80,7 +81,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="mailto:info@xtremeworx.co.za?subject=Booking%20Request">Book Now <span class="btn-arrow">→</span></a>
+      <a class="btn btn-primary" href="https://book.xtremeworx.co.za/book">Book Now <span class="btn-arrow">→</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -91,24 +92,26 @@
   <a href="#gallery">Gallery</a>
   <a href="#specials">Specials</a>
   <a href="#contact">Contact</a>
-  <a href="mailto:info@xtremeworx.co.za?subject=Booking%20Request">Book Now →</a>
+  <a href="https://book.xtremeworx.co.za/book">Book Detailing &amp; PPF →</a>
+  <a href="https://book.xtremeworx.co.za/queue">Join The Wash Queue →</a>
 </nav>
 
 <main id="top">
 
   <section class="hero">
     <div class="hero-media">
-      <img src="/assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 under studio lighting at Xtreme WorX, Lansdowne" fetchpriority="high" />
+      <img src="./assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 under studio lighting at Xtreme WorX, Lansdowne" fetchpriority="high" />
     </div>
     <div class="hero-scrim"></div>
     <div class="hero-content wrap">
       <div class="hero-panel">
         <h1 class="hero-logo-mark">
           <span class="sr-only">Xtreme WorX — Premium Detailing, Ceramic Coating, Window Tinting &amp; Car Wash in Lansdowne, Cape Town</span>
-          <img src="/assets/xw-logo-secondary.png" alt="Xtreme WorX — For The Xtreemist" />
+          <img src="./assets/xw-logo-secondary.png" srcset="./assets/xw-logo-secondary-680.png 680w, ./assets/xw-logo-secondary.png 1000w" sizes="340px" alt="Xtreme WorX — For The Xtreemist" />
         </h1>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="mailto:info@xtremeworx.co.za?subject=Booking%20Request">Book Now <span class="btn-arrow">→</span></a>
+          <a class="btn btn-primary" href="https://book.xtremeworx.co.za/book">Book Detailing &amp; PPF <span class="btn-arrow">→</span></a>
+          <a class="btn btn-ghost" href="https://book.xtremeworx.co.za/queue">Join The Wash Queue</a>
           <a class="btn btn-ghost" href="#gallery">See The Work</a>
         </div>
       </div>
@@ -125,15 +128,32 @@
             <p>Full exterior wash, R70 — for Uber &amp; Uber Black drivers. Ask in-bay for details.</p>
           </div>
         </div>
-        <a class="btn btn-primary" href="mailto:info@xtremeworx.co.za?subject=Uber%20Special%20Wash">Claim The Special <span class="btn-arrow">→</span></a>
+        <a class="btn btn-primary" href="https://book.xtremeworx.co.za/queue">Join The Wash Queue <span class="btn-arrow">→</span></a>
+      </div>
+
+      <div class="special-card">
+        <div class="special-text">
+          <div class="special-price">+1</div>
+          <div class="special-copy">
+            <h3>XW Rewards</h3>
+            <p>Every wash counts toward your rewards. Joining the queue needs no personal details, but to earn rewards leave your mobile number or email when you join. Ask in-bay for the current reward.</p>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="https://book.xtremeworx.co.za/queue">Join The Wash Queue <span class="btn-arrow">→</span></a>
       </div>
 
       <div class="reels">
         <div class="reel-card">
-          <video src="/assets/gallery/carwash/video/xw-carwash-reel-gti.mp4" autoplay muted loop playsinline></video>
+          <video src="./assets/gallery/carwash/video/xw-bay-reel-vertical.mp4" poster="./assets/gallery/carwash/video/poster-xw-bay-reel-vertical.jpg" data-lazy-video preload="none" muted loop playsinline></video>
         </div>
         <div class="reel-card">
-          <video src="/assets/gallery/carwash/video/xw-carwash-hero-loop.mp4" autoplay muted loop playsinline></video>
+          <video src="./assets/gallery/carwash/video/xw-bay-reel-shop.mp4" poster="./assets/gallery/carwash/video/poster-xw-bay-reel-shop.jpg" data-lazy-video preload="none" muted loop playsinline></video>
+        </div>
+        <div class="reel-card">
+          <video src="./assets/gallery/carwash/video/xw-carwash-reel-gti.mp4" poster="./assets/gallery/carwash/video/poster-xw-carwash-reel-gti.jpg" data-lazy-video preload="none" muted loop playsinline></video>
+        </div>
+        <div class="reel-card">
+          <video src="./assets/gallery/carwash/video/xw-carwash-hero-loop.mp4" poster="./assets/gallery/carwash/video/poster-xw-carwash-hero-loop.jpg" data-lazy-video preload="none" muted loop playsinline></video>
         </div>
       </div>
     </div>
@@ -145,26 +165,34 @@
         <div>
           <div class="section-kicker">What We Do</div>
           <h2 class="section-title">Services</h2>
-          <p class="section-sub">"Every finish should look intentional." Four disciplines, one standard — precision, care, protection, craftsmanship.</p>
+          <p class="section-sub">"Every finish should look intentional." Vehicle care and glass protection, held to one standard — precision, care, protection, craftsmanship.</p>
         </div>
       </div>
       <div class="services-grid">
         <article class="service-card">
-          <img src="/assets/gallery/xw-detail-interior-thankyou.jpg" alt="Detailed interior with Xtreme WorX thank-you mat" loading="lazy" />
+          <img src="./assets/gallery/xw-detail-interior-thankyou.jpg" alt="Detailed interior with Xtreme WorX thank-you mat" loading="lazy" />
           <div class="service-body">
             <h3>Detailing</h3>
             <p>Interior &amp; exterior detailing done properly, every time.</p>
           </div>
         </article>
         <article class="service-card">
-          <img src="/assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="VW Tiguan finished with ceramic coating" loading="lazy" />
+          <img src="./assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="VW Tiguan finished with ceramic coating" loading="lazy" />
           <div class="service-body">
             <h3>Ceramic Coating</h3>
             <p>Long-term gloss and protection that holds up.</p>
           </div>
         </article>
+        <article class="service-card service-card--text">
+          <div class="service-body">
+            <div class="service-text-mark" aria-hidden="true">PPF</div>
+            <h3>Paint Protection Film</h3>
+            <p>Clear surface protection for the areas of the vehicle that take the most impact.</p>
+            <a class="service-link" href="https://book.xtremeworx.co.za/book">Book PPF <span class="btn-arrow">→</span></a>
+          </div>
+        </article>
         <article class="service-card">
-          <img src="/assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 window tinting work" loading="lazy" />
+          <img src="./assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 window tinting work" loading="lazy" />
           <div class="service-body">
             <h3>Window Tinting</h3>
             <p>Quality film, fitted clean, no bubbling.</p>
@@ -172,11 +200,29 @@
           </div>
         </article>
         <article class="service-card">
-          <img src="/assets/gallery/carwash/xw-carwash-uber-bmw3-clean.jpg" alt="Freshly washed BMW 3 Series" loading="lazy" />
+          <img src="./assets/gallery/carwash/xw-carwash-uber-bmw3-clean.jpg" alt="Freshly washed BMW 3 Series" loading="lazy" />
           <div class="service-body">
             <span class="service-badge">Mobile — Coming Soon</span>
             <h3>Car Wash</h3>
             <p>Quick, thorough, and the R70 Uber special.</p>
+            <a class="service-link" href="https://book.xtremeworx.co.za/queue">Join The Wash Queue <span class="btn-arrow">→</span></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="./assets/services/xw-headlight-after.jpeg" alt="Restored clear headlight on a white vehicle" loading="lazy" />
+          <div class="service-body">
+            <h3>Headlight Restoration</h3>
+            <p>Bring cloudy, weathered lenses back to a cleaner, clearer finish.</p>
+            <a class="service-link" href="#headlights">See The Restoration <span class="btn-arrow">→</span></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="./assets/services/xw-flat-glass-residential.jpeg" alt="Residential windows shown with graduated tint shades" loading="lazy" />
+          <div class="service-body">
+            <span class="service-badge">Residential · Offices · Commercial</span>
+            <h3>Architectural Glass</h3>
+            <p>Flat-glass tinting for comfort, privacy, glare control and a cleaner look.</p>
+            <a class="service-link" href="#glass-tint">Explore Glass Tinting <span class="btn-arrow">→</span></a>
           </div>
         </article>
       </div>
@@ -206,6 +252,47 @@
     </div>
   </section>
 
+  <section id="glass-tint" class="glass-section">
+    <div class="wrap spec-section">
+      <div class="spec-copy">
+        <div class="section-kicker">Architectural Glass</div>
+        <h2 class="section-title">More Control In Every Room.</h2>
+        <p class="section-sub">A separate glass-tinting route for homes, offices and commercial spaces — with shade choices that help shape privacy, heat and glare without changing the architecture.</p>
+        <div class="glass-audience-list" aria-label="Architectural glass tinting applications">
+          <span>Residential</span>
+          <span>Offices</span>
+          <span>Commercial</span>
+        </div>
+        <a class="btn btn-ghost" href="mailto:info@xtremeworx.co.za?subject=Architectural%20Glass%20Tinting%20Enquiry">Ask About Glass Tinting</a>
+      </div>
+      <div class="glass-panel">
+        <img src="./assets/services/xw-flat-glass-office-commercial.jpeg" alt="Office and commercial flat-glass tinting example" loading="lazy" />
+        <div class="glass-panel-copy">
+          <div class="glass-panel-label">Flat Glass / Shade Direction</div>
+          <h3>Reflective control, without the visual noise.</h3>
+          <p>Use the supplied shade references to start the conversation around the space, the light and the level of privacy required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="headlights" class="headlight-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Vehicle Care</div>
+          <h2 class="section-title">Headlights, Brought Back.</h2>
+          <p class="section-sub">A focused restoration service for cloudy or weathered lenses, shown here with the supplied before-and-after vehicle reference.</p>
+        </div>
+      </div>
+      <div class="headlight-grid">
+        <figure class="headlight-shot"><img src="./assets/services/xw-headlight-before-left.jpeg" alt="Cloudy headlight before restoration, left side" loading="lazy" /><figcaption>Before / left lens</figcaption></figure>
+        <figure class="headlight-shot"><img src="./assets/services/xw-headlight-before-right.jpeg" alt="Cloudy headlight before restoration, right side" loading="lazy" /><figcaption>Before / right lens</figcaption></figure>
+        <figure class="headlight-shot is-after"><img src="./assets/services/xw-headlight-after.jpeg" alt="Clear headlight after restoration" loading="lazy" /><figcaption>After / restored clarity</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section class="editorial">
     <div class="editorial-media" style="background-image:url('/assets/campaigns/xw-campaign-gti.jpg')" role="img" aria-label="Xtreme WorX cover feature: VW Golf GTI at night"></div>
     <div class="editorial-copy">
@@ -225,29 +312,47 @@
         </div>
       </div>
       <div class="gallery-grid">
-        <a class="wide tall" href="/assets/gallery/xw-detail-m4-grey-tint.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 under studio lighting" loading="lazy" />
+        <a class="wide tall" href="./assets/gallery/xw-shop-exterior.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-shop-exterior.jpg" alt="Xtreme WorX shopfront at 14B Induland Crescent, Lansdowne" loading="lazy" />
         </a>
-        <a href="/assets/gallery/carwash/xw-carwash-uber-bmw5-foam.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/carwash/xw-carwash-uber-bmw5-foam.jpg" alt="BMW 5 Series covered in foam" loading="lazy" />
+        <a class="wide tall" href="./assets/gallery/xw-detail-m4-grey-tint.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-detail-m4-grey-tint.jpg" alt="BMW M4 under studio lighting" loading="lazy" />
         </a>
-        <a href="/assets/gallery/carwash/xw-carwash-uber-bmw3-foam.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/carwash/xw-carwash-uber-bmw3-foam.jpg" alt="BMW 3 Series covered in foam" loading="lazy" />
+        <a href="./assets/gallery/xw-wash-bmw-coupe-foam.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-wash-bmw-coupe-foam.jpg" alt="Black BMW coupe in the wash bay" loading="lazy" />
         </a>
-        <a href="/assets/gallery/xw-detail-tiguan-ceramic.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="VW Tiguan after ceramic coating" loading="lazy" />
+        <a href="./assets/gallery/carwash/xw-carwash-uber-bmw5-foam.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/carwash/xw-carwash-uber-bmw5-foam.jpg" alt="BMW 5 Series covered in foam" loading="lazy" />
         </a>
-        <a class="wide" href="/assets/gallery/carwash/xw-carwash-uber-bmw3-clean-2.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/carwash/xw-carwash-uber-bmw3-clean-2.jpg" alt="Clean BMW 3 Series after wash" loading="lazy" />
+        <a href="./assets/gallery/xw-tint-suv-bay.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-tint-suv-bay.jpg" alt="Window tint install on an SUV in the bay" loading="lazy" />
         </a>
-        <a href="/assets/gallery/carwash/xw-carwash-general-ranger.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/carwash/xw-carwash-general-ranger.jpg" alt="Ford Ranger Wildtrak after wash" loading="lazy" />
+        <a href="./assets/gallery/carwash/xw-carwash-uber-bmw3-foam.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/carwash/xw-carwash-uber-bmw3-foam.jpg" alt="BMW 3 Series covered in foam" loading="lazy" />
         </a>
-        <a href="/assets/gallery/carwash/xw-carwash-general-m2-golf.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/carwash/xw-carwash-general-m2-golf.jpg" alt="BMW M2 and VW Golf GTI after wash" loading="lazy" />
+        <a href="./assets/gallery/xw-detail-tiguan-ceramic.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-detail-tiguan-ceramic.jpg" alt="VW Tiguan after ceramic coating" loading="lazy" />
         </a>
-        <a href="/assets/gallery/xw-detail-interior-thankyou.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/gallery/xw-detail-interior-thankyou.jpg" alt="Detailed interior with thank you floor mat" loading="lazy" />
+        <a class="wide" href="./assets/gallery/carwash/xw-carwash-uber-bmw3-clean-2.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/carwash/xw-carwash-uber-bmw3-clean-2.jpg" alt="Clean BMW 3 Series after wash" loading="lazy" />
+        </a>
+        <a href="./assets/gallery/xw-tint-bakkie-front.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-tint-bakkie-front.jpg" alt="Bakkie window tint finished in the bay" loading="lazy" />
+        </a>
+        <a href="./assets/gallery/xw-tint-bakkie-side.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-tint-bakkie-side.jpg" alt="Bakkie window tint, side view" loading="lazy" />
+        </a>
+        <a href="./assets/gallery/carwash/xw-carwash-general-ranger.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/carwash/xw-carwash-general-ranger.jpg" alt="Ford Ranger Wildtrak after wash" loading="lazy" />
+        </a>
+        <a href="./assets/gallery/carwash/xw-carwash-general-m2-golf.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/carwash/xw-carwash-general-m2-golf.jpg" alt="BMW M2 and VW Golf GTI after wash" loading="lazy" />
+        </a>
+        <a href="./assets/gallery/xw-detail-interior-thankyou.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/gallery/xw-detail-interior-thankyou.jpg" alt="Detailed interior with thank you floor mat" loading="lazy" />
+        </a>
+        <a href="./assets/services/xw-headlight-after.jpeg" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/services/xw-headlight-after.jpeg" alt="Restored clear headlight" loading="lazy" />
         </a>
       </div>
     </div>
@@ -292,7 +397,7 @@
       <div class="trust-strip">
         <div class="trust-item">
           <h3>Real Photos, Not Stock</h3>
-          <p>Every image on this site is a real car in our bay — nothing borrowed.</p>
+          <p>Vehicle evidence stays real and clearly labelled. Service visuals are kept separate from the work gallery.</p>
         </div>
         <div class="trust-item">
           <h3>Uber-Friendly</h3>
@@ -313,7 +418,10 @@
           <div class="section-kicker">Get In Touch</div>
           <h2 class="section-title">Book Your Slot</h2>
         </div>
+        <img class="contact-shop" src="./assets/gallery/xw-shop-exterior.jpg" alt="Xtreme WorX Auto Detailing shopfront, Lansdowne" loading="lazy" />
         <div class="contact-details">
+          <a href="https://book.xtremeworx.co.za/book">Book detailing &amp; PPF online</a>
+          <a href="https://book.xtremeworx.co.za/queue">Join today's wash queue</a>
           <a href="tel:+27732310511">073 231 0511</a>
           <a href="mailto:info@xtremeworx.co.za">info@xtremeworx.co.za</a>
           <a href="https://instagram.com/xtreme_worx_za" target="_blank" rel="noopener noreferrer">@xtreme_worx_za</a>
@@ -328,7 +436,7 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <img class="footer-brand-mark" src="/assets/xw-logo-secondary.png" alt="Xtreme WorX" />
+      <img class="footer-brand-mark" src="./assets/xw-logo-secondary.png" srcset="./assets/xw-logo-secondary-680.png 680w, ./assets/xw-logo-secondary.png 1000w" sizes="180px" alt="Xtreme WorX" />
       <div class="footer-tagline">For The Xtreemist</div>
       <p class="footer-promise">Every finish should look intentional.</p>
     </div>
@@ -336,8 +444,11 @@
       <h4>Services</h4>
       <a href="#services">Detailing</a>
       <a href="#services">Ceramic Coating</a>
+      <a href="#services">Paint Protection Film</a>
       <a href="#tint">Window Tinting</a>
+      <a href="#headlights">Headlight Restoration</a>
       <a href="#services">Car Wash</a>
+      <a href="#glass-tint">Architectural Glass</a>
     </div>
     <div class="footer-col">
       <h4>Studio</h4>
@@ -358,6 +469,7 @@
   </div>
 </footer>
 
-<script src="/assets/site.js"></script>
+<script src="./assets/site.js"></script>
+<script src="./assets/analytics.js" defer></script>
 </body>
 </html>

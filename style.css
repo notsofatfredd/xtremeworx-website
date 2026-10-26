@@ -1,3 +1,31 @@
+/* Fonts are hosted on this site (no request to Google Fonts): Inter (variable, weights 400-700) and Rajdhani 600/700, latin subset, SIL Open Font License. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/rajdhani-600-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/rajdhani-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --obsidian: #050505;
   --night-navy: #071224;
@@ -117,7 +145,7 @@ p {
 }
 
 .brand-mark {
-  height: 40px;
+  height: 52px;
   width: auto;
   object-fit: contain;
 }
@@ -374,7 +402,7 @@ section {
 .reels {
   margin-top: 2.2rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.2rem;
 }
 
@@ -396,7 +424,7 @@ section {
 /* Services */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
 }
 
@@ -423,6 +451,42 @@ section {
 
 .service-card:hover img {
   transform: scale(1.06);
+}
+
+.service-card--text {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(21, 101, 255, 0.34), transparent 34%),
+    linear-gradient(145deg, #0c1c35, var(--carbon));
+}
+
+.service-card--text::before {
+  content: "";
+  position: absolute;
+  inset: 1.3rem;
+  border: 1px solid rgba(217, 222, 229, 0.14);
+  border-radius: calc(var(--radius-lg) - 5px);
+}
+
+.service-card--text::after {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.02) 10%, rgba(5, 5, 5, 0.82) 100%);
+}
+
+.service-text-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(21, 101, 255, 0.72);
+  border-radius: 50%;
+  color: var(--chrome-white);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 30px rgba(21, 101, 255, 0.18);
 }
 
 .service-card::after {
@@ -547,6 +611,126 @@ section {
 }
 
 .spec-value.hot {
+  color: var(--hyper-blue);
+}
+
+/* Architectural glass tinting */
+.glass-section {
+  background: linear-gradient(145deg, rgba(7, 18, 36, 0.9), var(--obsidian));
+  border-top: 1px solid rgba(21, 101, 255, 0.14);
+  border-bottom: 1px solid rgba(217, 222, 229, 0.1);
+}
+
+.glass-audience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+}
+
+.glass-audience-list span {
+  border: 1px solid rgba(21, 101, 255, 0.45);
+  border-radius: 999px;
+  padding: 0.42rem 0.72rem;
+  color: var(--chrome-white);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.glass-panel {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 222, 229, 0.14);
+  border-radius: var(--radius-lg);
+  background: var(--carbon);
+}
+
+.glass-panel img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.02) 30%, rgba(5, 5, 5, 0.88) 100%);
+}
+
+.glass-panel-copy {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+}
+
+.glass-panel-label,
+.headlight-shot figcaption {
+  color: var(--hyper-blue);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.glass-panel-copy h3 {
+  margin-top: 0.4rem;
+  font-size: 1.35rem;
+}
+
+.glass-panel-copy p {
+  max-width: 45ch;
+  margin-top: 0.45rem;
+  color: var(--liquid-silver);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* Headlight restoration */
+.headlight-section {
+  background: var(--carbon);
+}
+
+.headlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.headlight-shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(217, 222, 229, 0.12);
+  border-radius: var(--radius-md);
+  background: var(--obsidian);
+}
+
+.headlight-shot img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.headlight-shot figcaption {
+  padding: 0.8rem 0.95rem;
+  color: var(--liquid-silver);
+  letter-spacing: 0.09em;
+}
+
+.headlight-shot.is-after {
+  border-color: rgba(21, 101, 255, 0.58);
+}
+
+.headlight-shot.is-after figcaption {
   color: var(--hyper-blue);
 }
 
@@ -712,6 +896,15 @@ section {
   padding: 2.2rem;
 }
 
+.contact-shop {
+  width: min(340px, 100%);
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(217, 222, 229, 0.12);
+}
+
 .contact-details a {
   text-decoration: none;
   display: block;
@@ -809,6 +1002,10 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .headlight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: 160px;
@@ -824,11 +1021,16 @@ section {
   }
 
   .reels {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .spec-section {
     grid-template-columns: 1fr;
+  }
+
+  .glass-panel,
+  .glass-panel img {
+    min-height: 360px;
   }
 
   .editorial {
@@ -853,6 +1055,10 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .headlight-grid {
+    grid-template-columns: 1fr;
+  }
+
   .gallery-grid .wide,
   .gallery-grid .tall {
     grid-row: span 1;
@@ -862,6 +1068,11 @@ section {
   .special-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-shop {
+    width: 100%;
+    height: 200px;
   }
 }
 
@@ -890,3 +1101,258 @@ section {
   text-transform: uppercase;
   color: var(--chrome-white);
 }
+
+/* ---- Service page (car wash): reuses the site's hero, specials, section and footer styles ---- */
+.page-hero {
+  position: relative;
+  min-height: 56vh;
+  min-height: 56dvh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--obsidian);
+  padding: 0;
+}
+
+.page-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0 3.2rem;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2rem, 5.2vw, 3.6rem);
+  color: var(--chrome-white);
+  line-height: 1.05;
+  max-width: 18ch;
+}
+
+.page-hero-lead {
+  margin-top: 0.8rem;
+  color: var(--liquid-silver);
+  font-size: 1.1rem;
+  max-width: 40ch;
+}
+
+.page-hero-content .hero-cta {
+  margin-top: 1.6rem;
+}
+
+.fact-section {
+  background: var(--obsidian);
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.fact-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.fact-photos figure {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(217, 222, 229, 0.12);
+  aspect-ratio: 3 / 4;
+  background: var(--carbon);
+}
+
+.fact-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fact-list {
+  margin: 1.6rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.fact-list div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.8rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(217, 222, 229, 0.1);
+}
+
+.fact-list dt {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--hyper-blue);
+  padding-top: 0.2rem;
+}
+
+.fact-list dd {
+  margin: 0;
+  color: var(--chrome-white);
+  line-height: 1.5;
+}
+
+.fact-list a {
+  color: var(--chrome-white);
+  text-decoration-color: rgba(21, 101, 255, 0.6);
+  text-underline-offset: 3px;
+}
+
+.fact-note {
+  margin-top: 1.2rem;
+  color: var(--liquid-silver);
+  font-size: 0.95rem;
+}
+
+.related-section {
+  background: linear-gradient(180deg, var(--obsidian), var(--night-navy));
+}
+
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.related-list a {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid rgba(217, 222, 229, 0.22);
+  border-radius: 999px;
+  color: var(--chrome-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.related-list a:hover,
+.related-list a:focus-visible {
+  border-color: var(--hyper-blue);
+  background: rgba(21, 101, 255, 0.12);
+}
+
+.faq-section {
+  background: var(--night-navy);
+}
+
+.faq {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 760px;
+}
+
+.faq details {
+  border: 1px solid rgba(217, 222, 229, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(217, 222, 229, 0.04);
+  padding: 0 1.1rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: var(--chrome-white);
+  list-style-position: outside;
+}
+
+.faq summary:focus-visible {
+  outline: 2px solid var(--hyper-blue);
+  outline-offset: 3px;
+}
+
+.faq details p {
+  padding: 0 0 1.05rem;
+  color: var(--liquid-silver);
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .fact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    min-height: 62vh;
+    min-height: 62dvh;
+  }
+
+  .page-hero-content {
+    padding: 2rem 0 2.4rem;
+  }
+
+  .fact-list div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .fact-photos {
+    gap: 0.6rem;
+  }
+}
+
+/* Service page hero: readable text over the photo */
+.page-hero .hero-scrim {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.82) 0%, rgba(5, 5, 5, 0.45) 55%, rgba(5, 5, 5, 0.12) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.35) 0%, rgba(5, 5, 5, 0.88) 100%);
+}
+
+.page-hero .section-kicker {
+  color: var(--liquid-silver);
+}
+
+.page-hero-content h1 {
+  max-width: 24ch;
+}
+
+@media (max-width: 640px) {
+  .page-hero .hero-scrim {
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.55) 0%, rgba(5, 5, 5, 0.8) 100%);
+  }
+}
+
+/* Service page hero: lighter overlay, show more of the bay */
+.page-hero .hero-scrim {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.72) 0%, rgba(5, 5, 5, 0.3) 55%, rgba(5, 5, 5, 0) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.2) 0%, rgba(5, 5, 5, 0.82) 100%);
+}
+
+.page-hero-media img {
+  object-position: center 62%;
+}
+
+@media (max-width: 640px) {
+  .page-hero .hero-scrim {
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.5) 0%, rgba(5, 5, 5, 0.8) 100%);
+  }
+}
+
+/* 2026-10-26: stacked special cards (Uber special + XW Rewards) */
+.special-card + .special-card { margin-top: 1rem; }
